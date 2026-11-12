@@ -1,12 +1,16 @@
-export default function Cart (props) {
+import { useCart } from "../contexts/CartContext.jsx";
+
+export default function Cart() {
+  const { cart, removeFromCart } = useCart();
+
   return (
     <div className="p-3 border-start h-100">
-      <h5>Cart ({props.items.length})</h5>
-      {props.items.length === 0 ? (
+      <h5>Cart ({cart.length})</h5>
+      {cart.length === 0 ? (
         <p className="text-muted">Your cart is empty</p>
       ) : (
         <ul className="list-group list-group-flush">
-          {props.items.map((item) => (
+          {cart.map((item) => (
             <li key={item.id} className="list-group-item px-0 d-flex align-items-center gap-2">
               <img
                 src={item.image}
@@ -20,7 +24,7 @@ export default function Cart (props) {
               </div>
               <button
                 className="btn btn-sm btn-outline-danger"
-                onClick={() => props.onRemove(item.id)}
+                onClick={() => removeFromCart(item.id)}
               >
                 Remove
               </button>
