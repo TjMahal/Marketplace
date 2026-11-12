@@ -1,0 +1,69 @@
+{
+  "product": [
+    {
+      "id": "1",
+      "name": "Framework Laptop 13 Pro DIY Edition (Intel® Core™ Ultra Series 3)",
+      "price": "$1,199",
+      "available": true,
+      "image": "/frameworklaptop13prodiy.webp"
+    },
+    {
+      "id": "2",
+      "name": "Framework Laptop 13 Pro (AMD Ryzen™ AI 300 Series)",
+      "price": "$2,299",
+      "available": true,
+      "image": "/frameworklaptop12.webp"
+    },
+    {
+      "id": "3",
+      "name": "Framework Laptop 13 Pro (Intel® Core™ Ultra Series 3)",
+      "price": "$1,599",
+      "available": false,
+      "image": "/frameworklaptop13pro.webp"
+    },
+    {
+      "id": "4",
+      "name": "Framework Laptop 16 (AMD Ryzen™ AI 300 Series)",
+      "price": "$1,839",
+      "available": true,
+      "image": "/frameworklaptop16.webp"
+    },
+    {
+      "id": "5",
+      "name": "Framework Laptop 16 DIY Edition (AMD Ryzen™ AI 300 Series)",
+      "price": "$1,249",
+      "available": true,
+      "image": "/frameworklaptop16diy.webp"
+    },
+    {
+      "id": "6",
+      "name": "Framework Laptop 12 DIY Edition (13th Gen Intel® Core™)",
+      "price": "$499",
+      "available": false,
+      "image": "/frameworklaptop12diy.webp"
+    },
+    {
+      "id": "7",
+      "name": "Framework Laptop 12 DIY Edition (13th Gen Intel® Core™)",
+      "price": "$499",
+      "available": false,
+      "image": "/frameworklaptop12diy-13thgen.webp"
+    },
+    {
+      "id": "8",
+      "name": "Framework Laptop 13 DIY Edition (Intel® Core™ Ultra Series 3)",
+      "price": "$1,199",
+      "available": true,
+      "image": "/frameworklaptop13diyedition.webp"
+    },
+    {
+      "id": "9",
+      "name": "Framework Laptop 13 Pro (Intel® Core™ Ultra Series 3)",
+      "price": "$1,599",
+      "available": true,
+      "image": "/frameworklaptop13pro.webp"
+    }
+  ],
+  "cart": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}
