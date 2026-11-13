@@ -39,8 +39,35 @@ export function ProductProvider({children}) {
 
   }
 
+  //function to update the product price in the server using PATCH
+  function updateProduct(id, data) {
+    fetch(`http://localhost:4000/product/${id}`, {
+    method: "PATCH", //updates a specific attribute..the product price
+    headers: {"content-Type": "application/json"},
+    body:JSON.stringify(data),
+
+  })
+  .then((response)=> response.json())
+  .then((updated)=> {
+    setProducts((prev)=> prev.map((p)=> (p.id === id ? updated : p)))
+  })
+  
+
+  }
+
+  function deleteProduct(id) {
+    fetch(`http://localhost:4000/product/${id}`, {
+    method: "DELETE", //deletes a specific product from the products section
+    
+    })
+      .then((response)=> response.json())
+  .then(()=> {
+    setProducts((prev)=> prev.filter((p)=> (p.id !== id)));
+  })
+  }
+
   return (
-    <ProductContext.Provider value ={{products, setProducts, handleAddProduct}}>
+    <ProductContext.Provider value ={{products, setProducts, handleAddProduct, updateProduct, deleteProduct}}>
         {children}
     </ProductContext.Provider>
   )

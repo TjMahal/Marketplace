@@ -1,9 +1,14 @@
+import { useUser } from '../contexts/UserContext.jsx'
+
 export default function NavBar({
   searchTerm,
   onSearchChange,
   showForm,
   onToggleForm,
 }) {
+
+  const { user } = useUser();
+
   return (
     <nav className="d-flex justify-content-between align-items-center px-4 py-3 border-bottom bg-white">
       <button className="btn fs-4 p-0" aria-label="Menu">
@@ -31,10 +36,13 @@ export default function NavBar({
         >
           {showForm ? "Hide form" : "Add product"}
         </button>
-
+<div className="d-flex align-items-center gap-2">
         <span role="img" aria-label="Account">
           👤
         </span>
+        <div className="fs-6">{user.username}</div>
+        <small className="text-muted fs-6">{user.email}</small>
+        </div>
         <span role="img" aria-label="Cart">
           🛒
         </span>
